@@ -1,9 +1,10 @@
 #!/usr/bin/python
-# test.py
-# Usage:   test [input-file] [<debug with any char>]
+# life.py
+# Usage:   life [input-file=life.inp* ] [ <iterations=1-990> ] [<debug with any char>]
 # Output:  stdout
 #          non-result outputs directed to stderr
 # Author: Rick Penza, 2/26/2017
+#                     6/01/2018                       
 
 import sys, os, pprint, io, time
 from copy import deepcopy
@@ -13,8 +14,8 @@ import numpy as np
 DEBUG = False
 DEBUGR= False
 ANIM=True
-inputf='test.inp'
-
+inputf='life.inp'
+count=10
 
 def Process(filename,count):
     assert os.path.exists(filename), 'Cannot find the file: %s' % (filename)
